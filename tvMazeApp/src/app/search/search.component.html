@@ -1,0 +1,16 @@
+<div class="search-container">
+  <form [formGroup]="searchForm">
+    <input id="search" formControlName="searchQuery" (keyup)="onSearch()" />
+  </form>
+</div>
+<ul>
+  <li *ngFor="let s of shows">
+    <div routerLink="/details/{{ s.show.id }}" class="shown-search-container">
+      <img src="{{ s.show.image?.medium }}" />
+      <div class="shown-search-text">
+        <h2>{{ s.show.name }}</h2>
+        <p>{{ s.show.summary }}</p>
+      </div>
+    </div>
+  </li>
+</ul>
