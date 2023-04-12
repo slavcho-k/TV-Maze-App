@@ -1,12 +1,12 @@
 <div class="main-container">
-  <h2>{{ showDetails.name }}</h2>
-  <img src="{{ showDetails.image.medium }}" />
-  <p>{{ showDetails.summary }}</p>
-  <p>Language: {{ showDetails.language }}</p>
-  <p>Genres: {{ showDetails.genres }}</p>
-  <p>Status: {{ showDetails.status }}</p>
-  <p>Premiered: {{ showDetails.premiered }}</p>
-  <p>Official site: {{ showDetails.officialSite }} /p></p>
+  <h2>{{ showDetails?.name }}</h2>
+  <img src="{{ showDetails?.image.medium }}" />
+  <p>{{ showDetails?.summary }}</p>
+  <p>Language: {{ showDetails?.language }}</p>
+  <p>Genres: {{ showDetails?.genres }}</p>
+  <p>Status: {{ showDetails?.status }}</p>
+  <p>Premiered: {{ showDetails?.premiered }}</p>
+  <p>Official site: {{ showDetails?.officialSite }} /p></p>
 </div>
 
 <div class="cast-container">
@@ -21,10 +21,8 @@
   <h2>Episodes</h2>
   <ul>
     <li *ngFor="let e of episodes">
-      <!-- <img [src]="e.image ? e.image : '../../assets/images/placeholder.jpg'"> -->
-      <!-- <img [src]="e.image.medium ? e.image.medium : '#'"> -->
+      <img [src]="e.image?.original ? e.image?.original : 'assets/placeholder.jpg'">
       <p>S{{ e.season }}E{{ e.number }} - {{ e.name }}</p> 
-      <!-- <img [src]="e.image.medium? e.image.medium : '../../assets/images/placeholder.jpg'"> -->
     </li>
   </ul>
 </div>

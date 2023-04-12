@@ -31,6 +31,8 @@ export class DetailsComponent implements OnInit {
         this.showDetails = response.showDetails;
         this.cast = response.cast;
         this.episodes = response.episodes;
+        console.log(this.episodes[0].image?.medium);
+        
       });
     });
   }
