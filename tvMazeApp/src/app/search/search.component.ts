@@ -5,6 +5,7 @@ import { Show } from '../show';
 import { SingleShow } from '../single-show';
 import { debounceTime, switchMap, of } from 'rxjs';
 import { FormGroup, FormBuilder } from '@angular/forms';
+import { ThemeService } from '../theme.service.service';
 
 @Component({
   selector: 'app-search',
@@ -19,7 +20,8 @@ export default class SearchComponent {
   constructor(
     private apiService: ApiService,
     private router: Router,
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    protected themeService: ThemeService,
   ) {
     this.searchForm = this.formBuilder.group({
       searchQuery: [''],

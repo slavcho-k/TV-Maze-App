@@ -1,4 +1,4 @@
-<div class="search-container">
+<div class="search-container" [ngClass]="{'dark-theme': this.themeService.getMode()}">
   <form [formGroup]="searchForm">
     <input id="search" formControlName="searchQuery" (keyup)="onSearch()" />
   </form>

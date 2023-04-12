@@ -1,2 +1,3 @@
 <h1 id="title"><a routerLink="/search">TV Maze API App</a></h1>
+<button (click)="this.themeService.toggleMode()" class="toggle-button" [ngClass]="{'dark-theme': this.themeService.getMode()}"></button>
 <router-outlet></router-outlet>

@@ -21,7 +21,10 @@
   <h2>Episodes</h2>
   <ul>
     <li *ngFor="let e of episodes">
-      <p>S{{ e.season }}E{{ e.number }} - {{ e.name }}</p>
+      <!-- <img [src]="e.image ? e.image : '../../assets/images/placeholder.jpg'"> -->
+      <!-- <img [src]="e.image.medium ? e.image.medium : '#'"> -->
+      <p>S{{ e.season }}E{{ e.number }} - {{ e.name }}</p> 
+      <!-- <img [src]="e.image.medium? e.image.medium : '../../assets/images/placeholder.jpg'"> -->
     </li>
   </ul>
 </div>

@@ -10,3 +10,37 @@ a {
 #title {
   text-align: center;
 }
+
+.toggle-button {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  top: 15px;
+  right: 30px;
+  padding: 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.2);
+  font-size: 1rem;
+  cursor: pointer;
+  background-image: url("../assets/sun.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.toggle-button.dark-theme {
+  background-image: url("../assets/moon.jpg");
+}
+
+.toggle-button:hover {
+  background-color: #eee;
+}
+
+@media (max-width: 767px) {
+  .my-button {
+    width: 100%;
+    height: 40px;
+    font-size: 1rem;
+  }
+}

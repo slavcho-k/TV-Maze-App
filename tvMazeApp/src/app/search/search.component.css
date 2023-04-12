@@ -62,6 +62,12 @@ button {
   align-items: center;
 }
 
+.search-container.dark-theme #search {
+  background-color: #444;
+  border: 1px solid #333;
+  color: #fff;
+}
+
 #search {
   display: block;
   margin: 0 auto;
