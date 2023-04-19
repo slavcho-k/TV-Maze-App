@@ -39,6 +39,9 @@
 }
 
 .cast-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -47,6 +50,10 @@
 .cast-container li {
   font-size: 18px;
   margin-bottom: 10px;
+  text-align: center;
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+  text-align: center;
 }
 
 .episode-container {
@@ -71,4 +78,20 @@
 .episode-container li {
   font-size: 18px;
   margin-bottom: 10px;
+  text-align: center;
+}
+
+.episode-container img {
+  width: 50vh;
+}
+
+.cast-container img {
+  width: 25vh;
+  height: 37vh;
+}
+
+@media only screen and (max-width: 768px) {
+  .cast-container li {
+    flex-basis: calc(50% - 20px);
+  }
 }

@@ -13,7 +13,7 @@ export interface Person {
   birthday: string;
   deathday: any;
   gender: string;
-  image: Image;
+  image?: Image;
   updated: number;
   _links: Links;
 }

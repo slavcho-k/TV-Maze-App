@@ -13,6 +13,7 @@
   <h2>Cast</h2>
   <ul>
     <li *ngFor="let c of cast">
+      <img [src]="c.person.image?.original ? c.person.image?.original : 'assets/placeholder.jpg'">
       <p>{{ c.person.name }}</p>
     </li>
   </ul>
